@@ -1,0 +1,12 @@
+.btn {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn:active {
+    background-color: bisque;
+}
+
+.pressed {
+    background-color: bisque;
+}
