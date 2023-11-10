@@ -54,12 +54,10 @@ function checkSequences(sequenceIndex)
 // Function to initiate the next Sequence
 async function nextSequence() 
 {
-    isPlaying = false
     playerSequence.length = 0;
     currentLevel++
     pickRandomColor();
     await animateButton();
-    isPlaying = true
     colorButtons.forEach(btn => enableButton(btn))
 }
 
