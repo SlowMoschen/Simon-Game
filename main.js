@@ -69,6 +69,7 @@ async function animateButton()
         return new Promise(resolve => 
             {
                 addClass(button, 'pressed')
+                playSound('cpu')
                 setTimeout(() => {
                     removeClass(button, 'pressed')
                     setTimeout(resolve, 500)
@@ -166,6 +167,10 @@ function playSound(soundName)
             break
         case 'win':
             audio.src = './sounds/won.wav'
+            audio.play()
+            break
+        case 'cpu':
+            audio.src = './sounds/cpu_choice.mp3'
             audio.play()
             break
     }
