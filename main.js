@@ -159,15 +159,15 @@ function playSound(soundName)
     switch (soundName)
     {
         case 'click':
-            audio.src = '../sounds/click.wav'
+            audio.src = './sounds/click.wav'
             audio.play()
             break
         case 'lost':
-            audio.src = '../sounds/lost.wav'
+            audio.src = './sounds/lost.wav'
             audio.play()
             break
         case 'win':
-            audio.src = '../sounds/won.wav'
+            audio.src = './sounds/won.wav'
             audio.play()
             break
     }
