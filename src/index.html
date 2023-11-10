@@ -7,14 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <div>
-            <div class="btn" id="blue">BLUE</div>
-            <div class="btn" id="red">RED</div>
-            <div class="btn" id="green">GREEN</div>
-            <div class="btn" id="yellow">YELLOW</div>
+    <div class="container">
+        <h1>Simon Game</h1>
+        <p class="highscore">Highscore: <span id="highscore">0</span></p>
+        <div class="stats">
+            <p>Level: <span id="level">0</span></p>
+            <button id="start">Start</button>
+            <p>Time: <span id="time">0</span></p>
         </div>
-        <button id="start">Start</button>
+        <div class="color-btns">
+            <button class="btn" id="blue" disabled></button>
+            <button class="btn" id="red" disabled></button>
+            <button class="btn" id="green" disabled></button>
+            <button class="btn" id="yellow" disabled></button>
+            <div class="circle"></div>
+        </div>
+        <button id="reset" disabled>Reset</button>
+        <div class="loose-modal">
+            <p>Oh no! You made a mistake. <br> Game will be reset in <span id="reset-time">5</span> seconds.</p>
+        </div>
+        <p class="copyright">Copyright &copy; <span id="year"></span> Philipp Millner</p>
     </div>
     <script src="main.js"></script>
 </body>
