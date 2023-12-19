@@ -144,12 +144,16 @@ function updateUI()
 
 function saveHighScore() 
 {
-    const currentHS = localStorage.getItem('simon-game-highscore')
-    if(currentLevel > currentHS)
-    {
-        localStorage.setItem('simon-game-highscore', currentLevel)
+    try {
+        const currentHS = localStorage.getItem('simon-game-highscore') || 0
+        if(currentLevel > currentHS)
+        {
+            localStorage.setItem('simon-game-highscore', currentLevel)
+        }
+        return
+    } catch (error) {
+        console.log(error)
     }
-    return
 }
 
 function playSound(soundName) 
